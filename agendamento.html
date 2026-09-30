@@ -1,0 +1,62 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Agende seu momento | Make Maria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body>
+
+<div class="page-transition"></div>
+<div class="prototype-bar">PROTÓTIPO VISUAL • MAKE MARIA</div>
+<header class="site-header">
+  <a class="brand" href="index.html"><span>MAKE MARIA</span><small>MAQUIAGEM PROFISSIONAL</small></a>
+  <nav class="nav">
+    <a href="index.html">Início</a>
+    <div class="nav-drop">
+      <a href="#servicos">Serviços</a>
+      <div class="nav-drop-menu">
+        <a href="noivas.html">Noivas</a>
+        <a href="maquiagem.html">Maquiagem Social</a>
+        <a href="producoes.html">Produções + Cabelo</a>
+        <a href="brows-cilios.html">Brows & Cílios</a>
+      </div>
+    </div>
+    <a href="index.html#portfolio">Portfólio</a>
+    <a href="index.html#sobre">Sobre</a>
+    <a href="agendamento.html">Agende seu momento</a>
+  </nav>
+  <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  <a class="btn btn-dark desktop-cta" href="agendamento.html">Agendar</a>
+</header>
+<main>
+<section class="section" style="padding-top:70px">
+<div class="section-head reveal"><div><span class="eyebrow">AGENDE SEU MOMENTO</span><h2>Conte um pouco sobre o que você procura.</h2></div><p>Preencha o formulário e, ao enviar, uma mensagem pronta será aberta no WhatsApp da Make Maria.</p></div>
+
+<div class="info-row">
+<div class="info-card reveal"><small>WHATSAPP</small><strong>+55 34 9643-6601</strong></div>
+<div class="info-card reveal"><small>ENDEREÇO</small><strong>R. dos Eucalíptos, 91 - Joaquim dos Três<br>Monte Carmelo - MG, 38500-000</strong></div>
+<div class="info-card reveal"><small>INSTAGRAM</small><strong>@makemariabeauty_</strong></div>
+</div>
+
+<div class="form-map">
+<form class="booking-form reveal-left" id="bookingForm">
+<h2>Solicitar disponibilidade</h2><p style="color:var(--ink2);line-height:1.7">Você será direcionada ao WhatsApp com as informações preenchidas.</p>
+<div class="form-grid">
+<div class="field full"><label for="nome">Nome</label><input id="nome" required placeholder="Seu nome completo"></div>
+<div class="field"><label for="servico">Tipo de serviço</label><select id="servico" required><option value="">Selecione</option><option>Noiva</option><option>Maquiagem Social</option><option>Produção + Cabelo</option><option>Design de Sobrancelha</option><option>Nanopigmentação</option><option>Extensão de Cílios</option><option>Brows & Cílios</option><option>Outro</option></select></div>
+<div class="field"><label for="data">Data desejada</label><input id="data" type="date" required></div>
+<div class="field"><label for="horario">Horário aproximado</label><input id="horario" type="time"></div>
+<div class="field full"><label for="obs">Observações</label><textarea id="obs" placeholder="Ex.: formatura, horário do evento, local, quantidade de pessoas..."></textarea></div>
+<div class="field full"><button class="btn btn-brown" type="submit">Enviar pelo WhatsApp</button></div>
+</div>
+</form>
+<div class="map-card reveal-right"><iframe title="Como chegar à Make Maria" loading="lazy" allowfullscreen src="https://www.google.com/maps?q=R.%20dos%20Eucal%C3%ADptos%2C%2091%20-%20Joaquim%20dos%20Tr%C3%AAs%2C%20Monte%20Carmelo%20-%20MG%2C%2038500-000%2C%20Brasil&output=embed"></iframe></div>
+</div>
+</section>
+</main>
+<footer>
+  <div class="brand footer-brand"><span>MAKE MARIA</span><small>MAQUIAGEM PROFISSIONAL</small></div>
+  <div class="footer-info"><span>Monte Carmelo • MG</span><span>+55 34 9643-6601</span><span>@makemariabeauty_</span></div>
+  <small>Protótipo visual para apresentação comercial.</small>
+</footer>
+<script src="script.js"></script>
+
+<script>
+const params=new URLSearchParams(location.search); const s=params.get('servico'); if(s){ const el=document.getElementById('servico'); [...el.options].forEach(o=>{if(o.value===s||o.text===s)o.selected=true}); }
+</script>
+</body></html>
